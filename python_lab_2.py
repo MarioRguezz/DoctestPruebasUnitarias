@@ -190,7 +190,7 @@ def rima(word1, word2):
 
 
 def capital(pesos, interes, anios):
-    resultado=pesos * (1 + interes / 100) ** anios
+    resultado = pesos * (1 + interes / 100) ** anios
     print(round(resultado, 2))
     """ 15: Pide una cantidad de pesos, una tasa de interés y un
         numero de años. Muestra en cuanto se habrá convertido el
