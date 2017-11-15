@@ -1,6 +1,4 @@
-# -*- coding: utf-8 -*-
-""" Repaso interactivo de python
-"""
+# -*- coding: utf-8 -*- Repaso interactivo de python
 
 
 def lower_up(lower, upper):
@@ -37,13 +35,14 @@ def all_the_args(*args, **kwargs):
 def may_20(tup):
     y=""
     for x in tup:
-        if x >20:
-            if y =="":
-                y=str(x)
+        if x > 20:
+            if y == "":
+                y = str(x)
             else:
-                y=y + ', ' + str(x)
+                y = y + ', ' + str(x)
     print(y)
-    """ 3: Definir una tupla con 10 números. Imprimir la cantidad de números superiores a 20.
+    """ 3: Definir una tupla con 10 números. Imprimir la
+	cantidad de números superiores a 20.
     >>> may_20(10, 16, 22, 26, 27, 30)
         22, 26, 27, 30
     """
