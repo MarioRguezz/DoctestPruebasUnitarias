@@ -5,9 +5,9 @@
 
 def lower_up(lower,upper):
     for x in range(lower,upper+1):
-		print(x)
-	""" 1: Returns a list of numbers from the lower number to the upper number:
-	>>> lower_up(5,15)
+        print(x)
+    """ 1: Returns a list of numbers from the lower number to the upper number:
+    >>> lower_up(5,15)
     	5
     	6
     	7
@@ -21,7 +21,7 @@ def lower_up(lower,upper):
 		15
 	"""
 
-def all_the_args(*args, **kwargs):
+def all_the_args(*args,**kwargs):
 	print(args)
 	print(str(kwargs).replace('\'', '"'))
 	""" 2: Return an array. Use * to expand positional args and use ** to expand keyword args
@@ -39,8 +39,8 @@ def may_20(tup):
 				y=str(x)
 			else:
 				y=y + ', ' + str(x)
-	print(y)
-	""" 3: Definir una tupla con 10 números. Imprimir la cantidad de números superiores a 20.
+    print(y)
+    """ 3: Definir una tupla con 10 números. Imprimir la cantidad de números superiores a 20.
     >>> may_20(10, 16, 22, 26, 27, 30)
 		22, 26, 27, 30
     """
