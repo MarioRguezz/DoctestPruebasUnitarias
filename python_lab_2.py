@@ -59,7 +59,7 @@ def word_filter(list_of_words, n):
 
 
 def string_length(list):
-    print len(item)
+    print len(list)
     """ 5: imprime el largo de una cadena de caracteres
     >>> string_length("popularity")
         10
@@ -67,7 +67,7 @@ def string_length(list):
 
 
 def is_vocal(x):
-    if first in ('a', 'e', 'i', 'o', 'u'):
+    if x in ('a', 'e', 'i', 'o', 'u'):
         print(True)
     else:
         print(False)
@@ -150,9 +150,9 @@ def factorial(n):
 
 def to_roman(n):
     num_map = [(1000, 'M'), (900, 'CM'), (500, 'D'),
-           (400, 'CD'), (100, 'C'), (90, 'XC'),
-           (50, 'L'), (40, 'XL'), (10, 'X'),
-           (9, 'IX'), (5, 'V'), (4, 'IV'), (1, 'I')]
+               (400, 'CD'), (100, 'C'), (90, 'XC'),
+               (50, 'L'), (40, 'XL'), (10, 'X'),
+               (9, 'IX'), (5, 'V'), (4, 'IV'), (1, 'I')]
     roman = ''
     while n > 0:
         for i, r in num_map:
@@ -177,7 +177,7 @@ def rima(word1, word2):
             print("no rima")
     else:
         print("no rima")
-   """ 14: Indica si dos palabrar riman. Si coinciden
+    """ 14: Indica si dos palabrar riman. Si coinciden
         las 3 ultimas letras rima,
         si ncoinciden solo 2 rima un poco, si coincide solo 1 no rima.
     >>> rima(flor, coliflor)
@@ -190,8 +190,8 @@ def rima(word1, word2):
 
 
 def capital(pesos, interes, anios):
-    resultado=pesos*(1+interes/100)**anios
-    print(round(resultado,2))
+    resultado=pesos*(1 + interes / 100)**anios
+    print(round(resultado, 2))
     """ 15: Pide una cantidad de pesos, una tasa de interés y un
         numero de años. Muestra en cuanto se habrá convertido el
     capital inicial transcurridos esos años si cada año se aplica
