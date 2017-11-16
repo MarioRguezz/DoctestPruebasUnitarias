@@ -5,7 +5,9 @@ python:
 install:
   - pip install flake8
   - pip install coverage
+  - apt get install pep8
 # commands to run tests
 script:
   - flake8 --max-complexity=2 python_lab.py
   - python python_lab.py -m coverage --with-coverage --cover-min-percentage=99
+  - pep8 python_lab.py

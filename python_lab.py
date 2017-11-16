@@ -118,7 +118,7 @@ def square(list):
     >>> square(l)
     [0, 1, 4, 9]
     """
-    print ([i ** 2 for i in list])
+    print([i ** 2 for i in list])
 
 
 def is_prime(n):
