@@ -8,4 +8,4 @@ install:
 # commands to run tests
 script:
   - flake8 --max-complexity=2 python_lab.py
-  - python python_lab -m coverage --with-coverage --cover-min-percentage=99
+  - python python_lab.py -m coverage --with-coverage --cover-min-percentage=99
