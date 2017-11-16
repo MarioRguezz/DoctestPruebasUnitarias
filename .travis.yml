@@ -4,7 +4,8 @@ python:
 # commands to install dependencies
 install:
   - pip install flake8
-
+  - pip install coverage
 # commands to run tests
 script:
-  - flake8 --max-complexity=2 python_lab_2.py
+  - flake8 --max-complexity=2 python_lab.py
+  - python python_lab -m coverage --with-coverage --cover-min-percentage=99
