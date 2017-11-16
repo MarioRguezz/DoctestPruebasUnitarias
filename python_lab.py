@@ -40,11 +40,16 @@ def may_20(*tup):
     """
     y = ""
     for x in tup:
-        if x > 20:
-            if y == "":
-                y = str(x)
-            else:
-                y = y + ', ' + str(x)
+        may_201(x, y)
+    print(y)
+
+
+def may_201(x, y):
+    if x > 20:
+        if y == "":
+            y = str(x)
+        else:
+            y = y + ', ' + str(x)
     print(y)
 
 
@@ -55,9 +60,13 @@ def word_filter(list_of_words, n):
     """
     lista = []
     for item in list_of_words:
-        if len(item) > n:
-            lista.append(item)
+        prueba(item, n, lista)
     print(lista)
+
+
+def prueba(x, n, lista):
+    if len(x) > n:
+            lista.append(x)
 
 
 def string_length(list):
@@ -123,15 +132,24 @@ def is_prime(n):
     False
     """
     if n > 1:
-        for i in range(2, n):
-            if (n % i) == 0:
-                print(False)
-                break
-            else:
-                print(True)
-                break
+        loopprime(n)
     else:
         print(False)
+
+
+def prime(n, i):
+    if (n % i) == 0:
+        print(False)
+        return
+    else:
+        print(True)
+        return
+
+
+def loopprime(n):
+    for i in range(2, n):
+        prime(n, i)
+        break
 
 
 def factorial(n):
@@ -181,15 +199,23 @@ def rima(word1, word2):
     no rima
     """
     if word1[len(word1)-1] == word2[len(word2)-1]:
-        if word1[len(word1)-2] == word2[len(word2)-2]:
-            if word1[len(word1)-3] == word2[len(word2)-3]:
-                print('rima')
-            else:
-                print('rima un poco.')
-        else:
-            print('no rima')
+        rima3(word1, word2)
     else:
         print('no rima')
+
+
+def rima3(word1, word2):
+    if word1[len(word1)-2] == word2[len(word2)-2]:
+        rima2(word1, word2)
+    else:
+        print('no rima')
+
+
+def rima2(word1, word2):
+    if word1[len(word1)-3] == word2[len(word2)-3]:
+        print('rima')
+    else:
+        print('rima un poco.')
 
 
 def capital(pesos, interes, anios):
