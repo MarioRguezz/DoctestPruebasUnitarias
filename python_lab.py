@@ -38,19 +38,16 @@ def may_20(*tup):
     >>> may_20(10, 16, 22, 26, 27, 30)
     22, 26, 27, 30
     """
-    y = ""
+    lists = []
     for x in tup:
-        may_201(x, y)
-    print(y)
+        lists.append(may_20_1(x))
+    y = str(list(filter(None, lists)))
+    print(y[1:-1])
 
 
-def may_201(x, y):
+def may_20_1(x):
     if x > 20:
-        if y == "":
-            y = str(x)
-        else:
-            y = y + ', ' + str(x)
-    print(y)
+        return x
 
 
 def word_filter(list_of_words, n):
@@ -169,22 +166,22 @@ def factorial(n):
         return n * factorial(n-1)
 
 
-def to_roman(n):
+def to_roman(num):
     """ 13: Convert number integer to Roman numeral
         >>> to_roman(598)
-        [DXCVIII]
+        ['DXCVIII']
     """
-    num_map = [(1000, 'M'), (900, 'CM'), (500, 'D'),
-               (400, 'CD'), (100, 'C'), (90, 'XC'),
-               (50, 'L'), (40, 'XL'), (10, 'X'),
-               (9, 'IX'), (5, 'V'), (4, 'IV'), (1, 'I')]
-    roman = ''
-    while n > 0:
-        for i, r in num_map:
-            while n >= i:
-                roman += r
-                n -= i
-    print("["+roman+"]")
+    val = (1000, 900,  500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1)
+    syb = ('M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX',
+           'V', 'IV', 'I')
+    roman_num = ""
+    list = []
+    for i in range(len(val)):
+        count = int(num / val[i])
+        roman_num += syb[i] * count
+        num -= val[i] * count
+    list.append(roman_num)
+    return list
 
 
 def rima(word1, word2):
