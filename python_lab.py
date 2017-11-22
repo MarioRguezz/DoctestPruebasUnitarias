@@ -71,7 +71,7 @@ def string_length(list):
     >>> string_length("popularity")
     10
     """
-    print len(list)
+    print(len(list))
 
 
 def is_vocal(x):
@@ -93,7 +93,7 @@ def is_leap_year(year):
         True
     """
     import calendar
-    print calendar.isleap(year)
+    print(calendar.isleap(year))
 
 
 def has_uppercase(word):
