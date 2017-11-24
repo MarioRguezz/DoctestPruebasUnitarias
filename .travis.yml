@@ -11,3 +11,4 @@ script:
   - flake8 --max-complexity=2 python_lab.py
   - python python_lab.py -m coverage --with-coverage --cover-min-percentage=99
   - pep8 python_lab.py
+  - mypy python_lab_mypy.py
