@@ -37,25 +37,6 @@ def all_the_args(*args: str, **kwargs: bool) -> None:
     print(str(kwargs).replace('\'', '"'))
 
 
-def may_20(*tup: Tuple[int]) -> None:
-    """ 3: Definir una tupla con 10 números. Imprimir la
-        cantidad de números superiores a 20.
-    >>> may_20(10, 16, 22, 26, 27, 30)
-    22, 26, 27, 30
-    """
-    lists: List[int] = []
-    for x in tup:
-        result: int = may_20_1(x)
-        lists.append(result)
-    y = str(list(filter(None, lists)))
-    print(y[1:-1])
-
-
-def may_20_1(x: int) -> int:
-    if x > 20:
-        return x
-
-
 def word_filter(list_of_words: List[str], n: int) -> None:
     """ 4: Filtra las palabras que contienen más de n caracteres
     >>> word_filter(['hello', 'bye', 'computer', 'software', 'python'],5)
