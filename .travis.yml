@@ -9,6 +9,7 @@ install:
   - sudo apt-get install python3 python3-pip
   - sudo python3 -m pip install -U mypy
   - sudo pip3 install pycontracts
+  - pip install hypothesis 
 # commands to run tests
 script:
   - flake8 --max-complexity=2 python_lab.py
@@ -16,3 +17,4 @@ script:
   - pep8 python_lab.py
   - mypy python_lab_mypy.py
   - python3 python_lab_designbycontract.py
+  - pytest testing/python_lab_hypothesis.py
