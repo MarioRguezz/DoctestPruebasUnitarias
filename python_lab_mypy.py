@@ -51,9 +51,10 @@ def may_20(*tup: Tuple[int]) -> None:
     print(y[1:-1])
 
 
-def may_20_1(x: int) -> int:
-    if x > 20:
-        return x
+def may_20_1(x: Tuple[int]) -> int:
+    if x[0] > 20:
+        return x[0]
+    return x[0]
 
 
 def word_filter(list_of_words: List[str], n: int) -> None:
