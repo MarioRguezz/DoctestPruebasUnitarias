@@ -7,7 +7,7 @@ install:
   - pip install coverage
   - sudo apt install pep8
   - sudo apt-get install python3 python3-pip
-  - python3 -m pip install -U mypy
+  - sudo python3 -m pip install -U mypy
 # commands to run tests
 script:
   - flake8 --max-complexity=2 python_lab.py
